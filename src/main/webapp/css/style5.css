@@ -1,0 +1,1108 @@
+/*魔理沙、霊夢用css*/
+@charset "UTF-8";
+
+
+/*魔理沙、霊夢（Timeover画面）==================================================*/
+
+/*魔理沙用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .puyon2 {
+      -webkit-animation: puyon2 1.0s linear 0s 10, kirikae2 2s linear infinite 0s forwards /*forwards*/;
+      animation: puyon2 1.0s linear 0s 10,kirikae2 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes puyon2 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
+      50%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+      60%  { -webkit-transform: scale(0.95, 1.05) translate(0%, -3%); }
+      70%  { -webkit-transform: scale(1.05, 0.95) translate(0%, 3%); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes puyon2 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      40%  { transform: scale(0.95, 1.2) translate(0%, -10%); }
+      50%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+      60%  { transform: scale(0.95, 1.05) translate(0%, -3%); }
+      70%  { transform: scale(1.05, 0.95) translate(0%, 3%); }
+      80%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img2 img:nth-child(1) {
+		      position: fixed;
+      top: 70%;
+      left: 0%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img2 img:nth-child(2) {
+			      position: fixed;
+      top: 70%;
+      left: 0%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae2 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae2 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+
+
+
+/*霊夢用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .puyon1 {
+      -webkit-animation: puyon1 1.0s linear 0s 10, kirikae1 2s linear infinite 0s forwards /*forwards*/;
+      animation: puyon1 1.0s linear 0s 10,kirikae1 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes puyon1 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
+      50%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+      60%  { -webkit-transform: scale(0.95, 1.05) translate(0%, -3%); }
+      70%  { -webkit-transform: scale(1.05, 0.95) translate(0%, 3%); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes puyon1 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      40%  { transform: scale(0.95, 1.2) translate(0%, -10%); }
+      50%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+      60%  { transform: scale(0.95, 1.05) translate(0%, -3%); }
+      70%  { transform: scale(1.05, 0.95) translate(0%, 3%); }
+      80%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img1 img:nth-child(1) {
+	      position: fixed;
+      top: 70%;
+      left: 87%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img1 img:nth-child(2) {
+	      position: fixed;
+      top: 70%;
+      left: 87%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae1 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae1 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+/*魔理沙、霊夢（Timeover画面）==================================================*/
+
+
+
+
+
+  
+  
+  /*魔理沙、霊夢（incorrect画面）==================================================*/
+
+/*魔理沙用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .korokoro4 {
+      -webkit-animation: korokoro4 1.0s linear 0s 10, kirikae4 2s linear infinite 0s forwards /*forwards*/;
+      animation: korokoro4 1.0s linear 0s 10,kirikae4 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes korokoro4 {
+      0%   { -webkit-transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(5%, 0%) rotate(5deg); }
+      25%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      30%  { -webkit-transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { -webkit-transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      50%  { -webkit-transform: translate(15%, 0%) rotate(15deg); }
+      60%  { -webkit-transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { -webkit-transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { -webkit-transform: translate(0%, 0%) rotate(0deg); }
+      100% { -webkit-transform: translate(0%, 0%) rotate(0deg); }
+    }
+    @keyframes korokoro4 {
+      0%   { transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(5%, 0%) rotate(5deg); }
+      25%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { transform: translate(10%, 0%) rotate(10deg); }
+      50%  { transform: translate(15%, 0%) rotate(15deg); }
+      60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { transform: translate(0%, 0%) rotate(0deg); }
+      100% { transform: translate(0%, 0%) rotate(0deg); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img4 img:nth-child(1) {
+		      position: fixed;
+      top: 68%;
+      left: 2%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img4 img:nth-child(2) {
+			      position: fixed;
+      top: 68%;
+      left: 2%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae4 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae4 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+
+
+
+/*霊夢用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .korokoro3 {
+      -webkit-animation: korokoro3 1.0s linear 0s 10, kirikae3 2s linear infinite 0s forwards /*forwards*/;
+      animation: korokoro3 1.0s linear 0s 10,kirikae3 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes korokoro3 {
+      0%   { transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(5%, 0%) rotate(5deg); }
+      25%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { transform: translate(10%, 0%) rotate(10deg); }
+      50%  { transform: translate(15%, 0%) rotate(15deg); }
+      60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { transform: translate(0%, 0%) rotate(0deg); }
+      100% { transform: translate(0%, 0%) rotate(0deg); }
+    }
+    @keyframes korokoro3 {
+      0%   { transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(5%, 0%) rotate(5deg); }
+      25%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { transform: translate(10%, 0%) rotate(10deg); }
+      50%  { transform: translate(15%, 0%) rotate(15deg); }
+      60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { transform: translate(0%, 0%) rotate(0deg); }
+      100% { transform: translate(0%, 0%) rotate(0deg); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img3 img:nth-child(1) {
+	      position: fixed;
+      top: 68%;
+      left: 14%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img3 img:nth-child(2) {
+	      position: fixed;
+      top: 68%;
+      left: 14%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae3 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae3 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+/*魔理沙、霊夢（incorrect画面）==================================================*/
+ 
+
+
+
+
+
+/*魔理沙、霊夢（correct画面）==================================================*/
+
+/*魔理沙用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .purupuru6 {
+      -webkit-animation: purupuru6 1.0s linear 0s 10, kirikae6 2s linear infinite 0s forwards /*forwards*/;
+      animation: purupuru6 1.0s linear 0s 10,kirikae6 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes purupuru6 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      20%  { -webkit-transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+      50%  { -webkit-transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+      65%  { -webkit-transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes purupuru6 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      20%  { transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+      50%  { transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+      65%  { transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+      80%  { transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img6 img:nth-child(1) {
+		      position: fixed;
+      top: 68%;
+      left: 2%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img6 img:nth-child(2) {
+			      position: fixed;
+      top: 68%;
+      left: 2%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae6 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae6 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+
+
+
+/*霊夢用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .purupuru5 {
+      -webkit-animation: purupuru5 1.0s linear 0s 10, kirikae5 2s linear infinite 0s forwards /*forwards*/;
+      animation: purupuru5 1.0s linear 0s 10,kirikae5 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes purupuru5 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      20%  { -webkit-transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+      50%  { -webkit-transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+      65%  { -webkit-transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes purupuru5 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      20%  { transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+      50%  { transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+      65%  { transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+      80%  { transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img5 img:nth-child(1) {
+	      position: fixed;
+      top: 68%;
+      left: 14%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img5 img:nth-child(2) {
+	      position: fixed;
+      top: 68%;
+      left: 14%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae5 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae5 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+/*魔理沙、霊夢（correct画面）==================================================*/
+
+
+
+
+    /*魔理沙、霊夢吹き出し==================================================*/
+    
+     /*魔理沙、霊夢吹き出し==================================================*/
+.balloon3 {
+    
+  position: fixed;
+  top: 83%;
+  left: 200px;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 10px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 25px;
+  font-weight: bold;
+  background: #e0edff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px;
+  
+}
+
+.balloon3:before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+.balloon3 p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.balloon4 {
+    
+  position: fixed;
+  top: 83%;
+  right: 13%;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 10px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 25px;
+  font-weight: bold;
+  background: #e0edff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px;
+}
+
+.balloon4:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+.balloon4 p {
+  margin: 0;
+  padding: 0;
+}
+
+/*魔理沙、霊夢（クイズ画面）==================================================*/
+    
+    
+    
+    
+    
+    
+.balloon5 {
+    
+  position: fixed;
+  top: 60%;
+  left: 12%;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 10px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 20px;
+  font-weight: bold;
+  background: #e0edff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px;
+  
+}
+
+.balloon5:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+
+.balloon5 p {
+  margin: 0;
+  padding: 0;
+}
+/*魔理沙、霊夢吹き出し==================================================*/
+
+
+
+
+
+
+
+
+
+/*魔理沙、霊夢（last3画面）==================================================*/
+
+
+/*魔理沙用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .purupuru8 {
+      -webkit-animation: purupuru8 1.0s linear 0s 10, kirikae8 2s linear infinite 0s forwards /*forwards*/;
+      animation: purupuru8 1.0s linear 0s 10,kirikae8 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes purupuru8 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      20%  { -webkit-transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+      50%  { -webkit-transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+      65%  { -webkit-transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes purupuru8 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      20%  { transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+      50%  { transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+      65%  { transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+      80%  { transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img8 img:nth-child(1) {
+		      position: fixed;
+      top: 68%;
+      left: 2%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img8 img:nth-child(2) {
+			      position: fixed;
+      top: 68%;
+      left: 2%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae8 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae8 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+
+
+
+/*霊夢用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .purupuru7 {
+      -webkit-animation: purupuru7 1.0s linear 0s 10, kirikae7 2s linear infinite 0s forwards /*forwards*/;
+      animation: purupuru7 1.0s linear 0s 10,kirikae7 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes purupuru7 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      20%  { -webkit-transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+      50%  { -webkit-transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+      65%  { -webkit-transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes purupuru7 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      20%  { transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+      50%  { transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+      65%  { transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+      80%  { transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img7 img:nth-child(1) {
+	      position: fixed;
+      top: 68%;
+      left: 85%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img7 img:nth-child(2) {
+	      position: fixed;
+      top: 68%;
+      left: 85%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae7 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae7 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+
+
+
+
+
+
+
+/*魔理沙、霊夢（last1画面）==================================================*/
+
+/*魔理沙用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .korokoro8 {
+      -webkit-animation: korokoro8 1.0s linear 0s 10, kirikae8 2s linear infinite 0s forwards /*forwards*/;
+      animation: korokoro8 1.0s linear 0s 10,kirikae8 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes korokoro8 {
+      0%   { -webkit-transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(5%, 0%) rotate(5deg); }
+      25%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      30%  { -webkit-transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { -webkit-transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      50%  { -webkit-transform: translate(15%, 0%) rotate(15deg); }
+      60%  { -webkit-transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { -webkit-transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { -webkit-transform: translate(0%, 0%) rotate(0deg); }
+      100% { -webkit-transform: translate(0%, 0%) rotate(0deg); }
+    }
+    @keyframes korokoro8 {
+      0%   { transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(5%, 0%) rotate(5deg); }
+      25%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { transform: translate(10%, 0%) rotate(10deg); }
+      50%  { transform: translate(15%, 0%) rotate(15deg); }
+      60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { transform: translate(0%, 0%) rotate(0deg); }
+      100% { transform: translate(0%, 0%) rotate(0deg); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img8 img:nth-child(1) {
+		      position: fixed;
+      top: 68%;
+      left: 2%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img8 img:nth-child(2) {
+			      position: fixed;
+      top: 68%;
+      left: 2%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae8 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae8 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+
+
+
+/*霊夢用///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .korokoro7 {
+      -webkit-animation: korokoro7 1.0s linear 0s 10, kirikae7 2s linear infinite 0s forwards /*forwards*/;
+      animation: korokoro7 1.0s linear 0s 10,kirikae7 2s linear infinite 0s forwards /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes korokoro7 {
+      0%   { transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(5%, 0%) rotate(5deg); }
+      25%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { transform: translate(10%, 0%) rotate(10deg); }
+      50%  { transform: translate(15%, 0%) rotate(15deg); }
+      60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { transform: translate(0%, 0%) rotate(0deg); }
+      100% { transform: translate(0%, 0%) rotate(0deg); }
+    }
+    @keyframes korokoro7 {
+      0%   { transform: translate(0%, 0%); }
+      5%   { -webkit-transform: translate(5%, 0%) rotate(5deg); }
+      25%  { -webkit-transform: translate(10%, 0%) rotate(10deg); }
+      30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+      35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+      45%  { transform: translate(10%, 0%) rotate(10deg); }
+      50%  { transform: translate(15%, 0%) rotate(15deg); }
+      60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+      65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+      75%  { transform: translate(0%, 0%) rotate(0deg); }
+      100% { transform: translate(0%, 0%) rotate(0deg); }
+    }
+    
+
+    
+    /*画像切り替え霊夢*/
+
+
+.change_img7 img:nth-child(1) {
+	      position: fixed;
+      top: 68%;
+      left: 85%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img7 img:nth-child(2) {
+	      position: fixed;
+      top: 68%;
+      left: 85%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae7 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae7 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  50.5% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+/*魔理沙、霊夢（last1画面）==================================================*/
+
+

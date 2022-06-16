@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+/*========= レイアウトのためのCSS ===============*/
+p{
+	text-align: center;
+	margin: 20px 0;
+	font-size:1.5rem;
+}
+
+/*==================================================
+じわっ
+===================================*/
+
+.blur{
+	animation-name:blurAnime;
+	animation-duration:6s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+	filter: blur(10px);
+	transform: scale(1.02);
+	opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+	opacity: 1;
+  }
+}
+ 
+.blurTrigger{
+    opacity: 0;
+}

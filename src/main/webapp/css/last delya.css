@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  font-size: 130%;
+  border-radius: 20px;
+  width: 350px;
+  padding: 20px;
+    margin: 0 20px 20px 20px;
+  background: rgb(179, 177, 177);
+  color: rgb(0, 0, 0);
+  box-sizing:border-box;
+}
+
+/*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+
+.box{
+  opacity: 0;
+}
+
+/*==================================================
+ふわっ
+===================================*/
+
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* アニメーションスタートの遅延時間を決めるCSS*/
+
+.delay-time01{
+animation-delay: 0.7s;
+}
+
+.delay-time02{
+animation-delay: 1.4s;
+}
+
+.delay-time03{
+  animation-delay: 2.1s;
+  }
+  
+  .delay-time08{
+    animation-delay: 2.8s;
+    }
+    

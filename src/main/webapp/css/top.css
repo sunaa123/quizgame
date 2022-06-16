@@ -1,0 +1,232 @@
+/*top画面用css*/
+@charset "utf-8";
+
+.container {
+	display: flex;
+	align-content: stretch;
+	align-items: center;
+	z-index: 2;
+}
+
+
+.toppage{
+  /*color: black;*/
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+    z-index: 2;
+    color: white;
+}
+
+
+
+/*==================================================
+クイズ説明部分アニメーション（パタッ）：現状はflipRightを使用
+===================================*/
+
+/* 下へ */
+.flipDown{
+animation-name:flipDownAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes flipDownAnime{
+  from {
+    transform: perspective(2500px) rotateX(100deg);
+  opacity: 0;
+  }
+
+  to {
+    transform: perspective(2500px) rotateX(0);
+  opacity: 1;
+  }
+}
+
+
+/* 左へ */
+.flipLeft{
+animation-name:flipLeftAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+perspective-origin:left center;
+opacity:0;
+}
+
+@keyframes flipLeftAnime{
+  from {
+   transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+  opacity: 0;
+  }
+
+  to {
+  transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+  opacity: 1;
+  }
+}
+
+
+/* 左上へ */
+.flipLeftTop{
+animation-name:flipLeftTopAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes flipLeftTopAnime{
+  from {
+   transform: translate(-20px,80px) rotate(-15deg);
+  opacity: 0;
+  }
+
+  to {
+   transform: translate(0,0) rotate(0deg);
+  opacity: 1;
+  }
+}
+
+/* 右へ */
+.flipRight{
+animation-name:flipRightAnime;
+animation-duration:5s;
+animation-fill-mode:forwards;
+perspective-origin:right center;
+opacity:0;
+}
+
+@keyframes flipRightAnime{
+  from {
+   transform: perspective(600px) translate3d(0, 0, 0) rotateY(-30deg);
+  opacity: 0;
+  }
+
+  to {
+  transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+  opacity: 1;
+  }
+}
+
+/* 右上へ */
+.flipRightTop{
+animation-name:flipRightTopAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes flipRightTopAnime{
+  from {
+   transform: translate(-20px,80px) rotate(25deg);
+   opacity: 0;
+  }
+
+  to {
+   transform: translate(0,1) rotate(0deg);
+  opacity: 1;
+  }
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+p{
+  margin:10px 0;
+}
+
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 365px; 
+  padding: 30px 10px 15px 30px; 
+  margin: 20px;
+  background: rgba(46, 0, 197, 0.3);/*"rgba"にすると、色番号の後に透過度をしていできる*/
+  /*background: rgba(128, 0, 255, 0.3); */
+  color: #fff;
+  position: fixed;
+  top: 27%; 
+  left: 67%; 
+  box-shadow: 0 0 1px 1px #808080 inset;
+  border-radius: 17px
+}
+
+
+
+
+/*ボタン設定、アニメーション////////////////////////////////////////////////*/
+
+ .genre {
+ cursor:pointer;
+ font-weight: bold;
+ font-size: 70%;
+ text-align: center;
+ height: 42px;
+ width: 150px;
+ z-index: 2;
+ border-radius: 17px;
+ color: white;
+ background-color: black;
+ /*border:1px solid rgba(128, 0, 255, 1.0);*/
+ border:1px solid #2e00c5;
+ }
+ 
+
+ .animoButtonOverlay{
+ display:inline-block;
+ padding:10px 25px;
+ /*position:relative;color:#f39c12;*/
+ position:relative;color:white;
+ background-color: black;
+ cursor:pointer;
+ font-weight: bold;
+ border-radius: 17px
+ }
+ 
+ .animoButtonOverlay::before{
+ content:'';
+ position:absolute;
+ height:100%;
+ width:100%;
+ top:5px;
+ right:5px;
+ /*background-color:#f39c12;*/
+ background-color:#2e00c5;
+ /*background-color:rgba(128, 0, 255, 0.7);*/
+ z-index:-1;
+ transition:transform .2s ease-in-out;
+ border-radius: 17px
+ }
+ 
+ .animoButtonOverlay::after{
+ content:'';
+ position:absolute;
+ top:0;
+ left:0;
+ height:100%;
+ width:100%;
+ /*border:1px solid rgb(255, 128, 0);*/
+ /*border:1px solid rgba(128, 0, 255, 1.0);*/
+ border:1px solid #2e00c5;
+ border-radius: 17px
+ }
+ 
+ .animoButtonOverlay:hover::before{
+ transform:translate(6px,-4px);
+ }
+ 
+ .animoButtonOverlay:hover::after{
+  border:2px solid #ffffff;
+ 
+ }
+ 
+ /*ボタンアニメーション////////////////////////////////////////////////*/
+        

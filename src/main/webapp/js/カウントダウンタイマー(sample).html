@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Sample for Boost QuizGame</title>
+		<link href="../../_common/images/favicon.ico" rel="shortcut icon">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+
+		<style>
+			h2 span {
+    			font-size: 1rem;
+			}
+			.timer {
+    			font-weight: bold;
+    			font-size: 30px;
+			}
+			.timer span {
+    			font-size: 100px;
+			}
+
+		</style>
+	
+	</head>
+	
+	<body>
+	
+		<header>
+			<div class="container">
+				<h1 style="text-align: center;">カウントダウンタイマー</h1>
+			</div><!-- /.container -->
+		</header>
+
+		<main>
+			<div class="container">
+				<section>
+    				<div style="text-align: center;">
+    					<h2><span style text-align: center>Boostクイズ</span><br>
+    					回答完了まで</h2>
+    					<p class="timer">あと<span id="timer">10</span>秒</p>	
+    					<a href="" id="start" class="timer">スタート</a>
+    				</div>
+				</section>
+			</div><!-- /.container -->
+
+
+		</main>
+	<footer>
+	</footer>
+
+	<script>
+	'use strict';
+
+		window.onload=function(){
+  			document.querySelector('#start').addEventListener('click',function(e){
+    		e.preventDefault();
+    			var count = 10;
+    			var id = setInterval(function(){
+      			count--;
+      				document.querySelector('#timer').textContent=count;
+      				if(count <= 0) clearInterval(id);
+    			},1000);
+  			});
+		}
+		
+	</script>
+	
+	</body>
+	
+</html>

@@ -1,0 +1,963 @@
+/*クイズ画面用css*/
+@charset "UTF-8";
+
+head {
+	min-width: 1000px;
+	height: 40px;
+    background: rgb(183, 222, 245);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.header {
+	margin: 0;
+	
+}
+
+body {
+	margin-top:10px;
+    min-width: 1000px;
+    background: url(背景.png)center / cover;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+
+
+
+input:focus, select:focus, textarea:focus {
+background-color: red;
+}
+
+.container {
+	display: flex;
+	align-content: stretch;
+}
+
+
+
+
+/*ボタンをふわっと入れるためのs処理==================================================*/
+
+.btn,
+a.btn,
+button.btn {
+	margin: 20px 10px 0px 10px;
+	padding: 100px;
+	height: 120px;
+	width: 100%;
+	box-shadow: 2px 2px 4px;
+
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 1rem;
+}
+
+
+
+/*ボタンをふわっと入れるためのs処理==================================================*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+.delay-time02{
+animation-delay: 0.2s;
+}
+
+.delay-time03{
+animation-delay: 0.3s;
+}
+
+.delay-time04{
+animation-delay: 0.4s;
+}
+
+/*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+
+.box{
+	opacity: 0;
+}
+
+/*==================================================
+ふわっ
+===================================*/
+
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*ここまで==================================================*/
+
+
+
+
+
+
+
+
+/*リボン==================================================*/
+
+
+
+.ribbon20-wrapper { 
+  /*display: block;
+  position: relative;*/
+  display: grid;/*この行と下の行を追加すると範囲内でテキストを中央配置できる（IE11非対応）*/
+  place-items: center;
+  position: block;
+  margin: 0 auto;
+  padding: 2px 40px 0.5px 40px;
+  width: 80%;
+  /*min-height: 145px;*/
+  height: 200px;
+  font-size: 35px;
+  text-align: center;
+   
+   box-shadow: 2px 2px 4px;
+   background:#e0ffff;
+   border-radius: 1rem;
+  }
+.ribbon20 {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  margin: 0;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: white;
+  background: #70c7ff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+}
+.ribbon20:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -7px;
+  border: none;
+  height: 38px;
+  width: 7px;
+  background: #70c7ff;
+  border-radius: 5px 0 0 5px;
+}
+.ribbon20:after {
+  position: absolute;
+  content: '';
+  bottom: -7px;
+  left: -5px;
+  border: none;
+  height: 7px;
+  width: 5px;
+  background: #4d99ca;
+  border-radius: 5px 0 0 5px;
+}
+
+/*リボン==================================================*/
+
+
+
+
+/*爆弾==================================================*/
+
+.bomb{
+  position: fixed;
+  top: 400px;
+  left: 50%;
+
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+
+  transform: translate(-50%,-50%) rotate(5deg);
+}
+
+.bomb:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+
+  background-color: currentColor;
+  box-shadow: 0 0 1px 1px black inset;
+
+  transform: translate(-50%,-50%);
+
+  z-index: 1;
+}
+
+.bomb:after{
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 8%;
+
+  width: 50%;
+  height: 50%;
+  border-radius: 45%;
+  border: 5px solid transparent;
+  border-left: 5px dotted white;
+
+  transform: rotate(30deg);
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* 出っ張り */
+.bomb .ledge{
+  position: absolute;
+  left: 50%;
+
+  display: inline-block;
+  width: 30%;
+  height: 20%;
+  border-radius: 15% 15% 100% 100%;
+  background-color: currentColor;
+
+  transform: translate(-50%,-25%);
+
+  z-index: 2;
+}
+
+/* 導火線 */
+.bomb .fuse{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 99%;
+  height: 99%;
+  border: 3px solid transparent;
+  border-top-color: #D0BAA5;
+  border-right-color: #D0BAA5;
+  border-radius: 100%;
+
+  box-sizing: border-box;
+  transform: translate(-15%,-75%) rotate(-20deg);
+
+  z-index: -1;
+}
+
+.bomb .fuse:before,
+.bomb .fuse:after{
+  content: "＊";
+  position: absolute;
+  right: -.60em;
+  bottom: 0;
+
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+.bomb .fuse:before{
+  color: red;
+  transform: translate(-50%,0) rotate(0);
+
+}
+
+.bomb .fuse:after{
+  color: orange;
+  transform: translate(-50%,0) rotate(30deg);
+}
+
+.bomb .dust{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%,-50%);
+}
+
+/* 画面がちらつく場合はshadowの指定数を減らすと良い */
+.dust span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+
+  background-color: blue;
+  box-shadow: 
+    +30px -30px 0 0 green,
+    -30px +30px 0 0 purple,
+    +60px +60px 0 0 pink,
+    -60px -60px 0 0 red;
+
+  backface-visibility: hidden;
+  transform: translate(-50%,-50%) rotate(var(--angle)) translateY(0);
+
+  opacity: 0;
+  z-index: 2;
+}
+
+.dust span:nth-of-type(1){  --angle: 00deg;  }
+.dust span:nth-of-type(2){  --angle: 30deg;  }
+.dust span:nth-of-type(3){  --angle: 60deg;  }
+.dust span:nth-of-type(4){  --angle: 90deg;  }
+.dust span:nth-of-type(5){  --angle: 120deg; }
+.dust span:nth-of-type(6){  --angle: 150deg; }
+.dust span:nth-of-type(7){  --angle: 180deg; }
+.dust span:nth-of-type(8){  --angle: 210deg; }
+.dust span:nth-of-type(9){  --angle: 240deg; }
+.dust span:nth-of-type(10){ --angle: 270deg; }
+.dust span:nth-of-type(11){ --angle: 300deg; }
+.dust span:nth-of-type(12){ --angle: 330deg; }
+
+.dust .msg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: inline-block;
+  margin: 0;
+
+  text-shadow: 2px 2px 0 black;
+  opacity: 0;
+
+  transform: translate(-50%,-50%);
+  z-index: 3; 
+}
+
+.orange{
+  color: orange;
+}
+
+.black{
+  color: black;
+}
+
+/* animation */
+.bomb:before,.bomb:after,
+.bomb .ledge{ animation: after_exp 1s 10s steps(1,start) forwards; }
+
+.bomb .fuse{ animation: 
+    fuse_anim 10s linear,
+    after_exp 1s 10s steps(1,start) forwards; 
+}
+
+.bomb .fuse:before{ animation: burning 10s linear; }
+.bomb .fuse:after { animation: burning 10s linear reverse;}
+
+.dust span{ animation: explosion 2s 10s linear; }
+
+.dust .msg{ animation: message 2s 10s linear; }
+
+@keyframes fuse_anim{
+  49%{
+    border-top-color: #D0BAA5;
+  }
+
+  50%{
+    border-top-color: transparent;
+  }
+
+  100%{
+    border-top-color: transparent;
+    transform: translate(-15%,-75%) rotate(-200deg);
+  }
+}
+
+@keyframes burning{
+  to{
+    transform: translate(-50%,0) rotate(360deg);
+  }
+}
+
+@keyframes explosion{
+  from{
+    opacity: 1;
+    transform: translate(-50%,-50%) rotate(var(--angle)) translateY(50px);
+  }
+
+  to{
+    opacity: 0;
+    transform: translate(-50%,-50%) rotate(var(--angle)) translateY(-200px) scale(.5);
+  }
+}
+
+/* 爆発後 */
+@keyframes after_exp{
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes message{
+  from{
+    opacity: 1;
+  }
+
+  to{
+    font-size: 4.5em;
+  }
+}
+
+
+/*爆弾==================================================*/
+
+
+
+
+/*Timer==================================================*/
+.timer {
+	margin: 0 10px 0 10px;
+	font-weight: bold;
+    font-size: 30px;    
+}
+
+#timer {
+	margin: 0;
+	font-weight: bold;
+    font-size: 80px;
+}
+
+
+
+
+/*correct画面==================================================*/
+
+
+.stamp1{
+  position: fixed;
+  top:  38%;
+  left: 65% ;
+  background: url(correct.png)center / cover;
+  z-index: -2;
+  display: block;
+  width:500px;
+  height: 500px;
+  
+}
+
+.word {
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	text-shadow: 1px 2px 3px #808080;
+	transition-delay: 1s;
+}
+
+.judge {
+	font-size: 45px;
+  	letter-spacing: 0.1em;
+  	color: white;
+  	text-shadow: 1px 2px 3px #191970;
+  	z-index: 4;
+}
+/*correct画面==================================================*/
+
+
+/*incorrec画面t==================================================*/
+
+
+.stamp2{
+  position: fixed;
+  top: 40%;
+  left: 65%;
+  background: url(incorrect.png)center / cover;
+  z-index: -2;/*個々の数値を-2以下にしないと文字に隠れてしまう*/
+  display: block;
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  
+}
+
+.judge2 {
+	text-align: center;
+	padding: 0 10%;
+	font-size: 30px;
+  	letter-spacing: 0.1em;
+  	color: white;
+  	text-shadow: 1px 2px 3px #191970;
+  	transition-delay: 2s;
+}
+
+
+/*incorrect画面==================================================*/
+
+/*correct・incorrect画面共有==================================================*/
+
+.next {
+
+	text-align: center;
+	margin: 0 auto;
+  	width: 80%;
+	font-size: 25px;
+  	font-weight: bold;
+  	color: white;
+  	text-shadow: 1px 2px 3px #191970;
+}
+
+
+.button  {
+  font-size: 20px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  border: solid 2px #2e00c5;
+  border-radius: 7px;
+  transition: .4s;
+  cursor: pointer;
+  background: rgba(46, 0, 197, 0.3);
+}
+
+.button:hover {
+  background: #2e00c5;
+  color: #ffff00;
+}
+
+
+
+
+    /* CSSアニメーションの設定 */
+    .poyon {
+      -webkit-animation: poyon 1.1s linear 0s 1;
+      animation: poyon 1.1s linear 0s 1;
+    }
+    @-webkit-keyframes poyon {
+      0%   { -webkit-transform: scale(0.8, 1.4) translate(0%, -100%); }
+      10%  { -webkit-transform: scale(0.8, 1.4) translate(0%, -15%); }
+      20%  { -webkit-transform: scale(1.4, 0.6) translate(0%, 30%); }
+      30%  { -webkit-transform: scale(0.9, 1.1) translate(0%, -10%); }
+      40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -30%); }
+      50%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
+      60%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+      70%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes poyon {
+      0%   { transform: scale(0.8, 1.4) translate(0%, -100%); }
+      10%  { transform: scale(0.8, 1.4) translate(0%, -15%); }
+      20%  { transform: scale(1.4, 0.6) translate(0%, 30%); }
+      30%  { transform: scale(0.9, 1.1) translate(0%, -10%); }
+      40%  { transform: scale(0.95, 1.2) translate(0%, -30%); }
+      50%  { transform: scale(0.95, 1.2) translate(0%, -10%); }
+      60%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+      70%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+    
+    /*========= タイピング ===============*/
+
+.TextTyping span {
+  display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+  content: "|";
+  animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+/*correct・incorrect画面共有==================================================*/
+
+
+
+
+/*魔理沙、霊夢（クイズ画面）==================================================*/
+
+/*霊夢///////////////////////////////////////////////////*/ 
+    /* CSSアニメーションの設定 */
+    .poyooon1 {
+      -webkit-animation: poyooon1 1.2s linear 0s 9, pururun1 2s linear 9s 1, kirikae1 4s linear forwards 7s /*forwards*/;
+      animation: poyooon1 1.2s linear 0s 9,pururun1 2s linear 9s 1, kirikae1 4s linear forwards 7s /*forwards*/;
+      /*position: fixed;
+      top: 70%;
+      left: 0%;*/
+    }
+    
+    @-webkit-keyframes poyooon1 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+      40%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
+      50%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      60%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -100%); }
+      75%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -20%); }
+      85%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes poyooon1 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+      40%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+      50%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      60%  { transform: scale(0.9, 1.2) translate(0%, -100%); }
+      75%  { transform: scale(0.9, 1.2) translate(0%, -20%); }
+      85%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+    /*
+    .pururun {
+      -webkit-animation: pururun 1.2s linear 0.2s 1;
+      animation: pururun 1.2s linear 0.2s 1;
+      animation-delay: 1000ms;
+    }
+    */
+    @-webkit-keyframes pururun1 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg); }
+      60%  { -webkit-transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg); }
+      70%  { -webkit-transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      90%  { -webkit-transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes pururun1 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg); }
+      60%  { transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg); }
+      70%  { transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      90%  { transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    
+    /*画像切り替え霊夢*/
+
+.change_img1 img:nth-child(1) {
+	      position: fixed;
+      top: 70%;
+      left: 86%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img1 img:nth-child(2) {
+      position: fixed/*absolute*/;
+      top: 70%;
+      left: 86%;
+      
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+          
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae1 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  49% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae1 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  49% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+    
+  /*魔理沙///////////////////////////////////////////////////*/  
+    
+      .poyooon2 {
+      -webkit-animation: poyooon2 1.2s linear 0.5s 9, pururun2 2s linear 9s 1, kirikae2 4s linear forwards 7s /*forwards*/;
+      animation: poyooon2 1.2s linear 0.5s 9,pururun2 2s linear 9s 1, kirikae2 4s linear forwards 7s /*forwards*/;
+      /*animation-delay: 500ms;*/
+      /*position: fixed;
+      top: 70%;
+      left: 87%;*/
+    }
+    
+    
+     @-webkit-keyframes poyooon2 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+      40%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
+      50%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      60%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -100%); }
+      75%  { -webkit-transform: scale(0.9, 1.2) translate(0%, -20%); }
+      85%  { -webkit-transform: scale(1.2, 0.8) translate(0%, 15%); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes poyooon2 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+      40%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+      50%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      60%  { transform: scale(0.9, 1.2) translate(0%, -100%); }
+      75%  { transform: scale(0.9, 1.2) translate(0%, -20%); }
+      85%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+      100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+     @-webkit-keyframes pururun2 {
+      0%   { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.0, 1.0) translate(-10%, 0%) skew(10deg, 0deg); }
+      60%  { -webkit-transform: scale(1.0, 1.0) translate(-20%, 0%) skew(20deg, 0deg); }
+      70%  { -webkit-transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      90%  { -webkit-transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    }
+    @keyframes pururun2 {
+      0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+      10%  { -webkit-transform: scale(1.0, 1.0) translate(-10%, 0%) skew(10deg, 0deg); }
+      60%  { -webkit-transform: scale(1.0, 1.0) translate(-20%, 0%) skew(20deg, 0deg); }
+      70%  { -webkit-transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+      80%  { -webkit-transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+      90%  { -webkit-transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+      100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+    } 
+ 
+ /*画像切り替え魔理沙*/
+
+.change_img2 img:nth-child(1) {
+	      position: fixed;
+      top: 70%;
+      left: 0%;
+  z-index: 2;
+  visibility: visible;
+}
+
+.change_img2 img:nth-child(2) {
+      position: fixed/*absolute*/;
+      top: 70%;
+      left: 0%;
+      
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+          
+  z-index: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes kirikae2 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  49% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+@keyframes kirikae2 {
+  0% {
+    visibility: visible;
+    z-index: 2;
+  }
+  49% {
+    visibility: visible;
+    z-index: 2;
+  }
+  51% {
+    visibility: hidden;
+    z-index: 0;
+  }
+  100% {
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+
+
+
+
+    /*魔理沙、霊夢吹き出し==================================================*/
+ 
+
+    
+    
+.balloon1 {
+    
+  position: fixed;
+  top: 81%;
+  left: 15%;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 10px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 35px;
+  background: #e0edff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px;
+  
+}
+
+.balloon1:before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+.balloon1 p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+.balloon2 {
+    
+  position: fixed;
+  top: 81%;
+  right: 13%;
+   display: inline-block;
+  margin: 1.5em 0;
+  padding: 10px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 35px;
+  background: #e0edff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px;
+}
+
+.balloon2:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+.balloon2 p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+#hideMe {/*経過時間によって消す作業を行うため、このコードを入れる*/
+    -moz-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 9s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 9s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+
+
+
+
+/*魔理沙、霊夢（クイズ画面）==================================================*/
